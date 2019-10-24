@@ -1,0 +1,5 @@
+package com.springbootwebapp.controller;
+
+public class LoginController {
+
+}

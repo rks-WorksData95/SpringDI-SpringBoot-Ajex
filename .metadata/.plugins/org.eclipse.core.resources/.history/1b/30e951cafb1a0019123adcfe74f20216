@@ -1,0 +1,61 @@
+<%@page import="com.MovieTicketBooking.model.Screens"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ include file="common/header.jspf" %>
+<%@ include file="common/navigation.jspf" %>
+<!DOCTYPE html">
+<html>
+<head>
+
+<style type="text/css">
+
+#screen1
+{
+	background-color: #F5F7FA;
+	margin: 10px auto 10px;
+}
+#seats
+{
+	max-width: 245px;
+	display: inline-block;
+	padding:5px;
+	margin:15px;
+	float: left;
+}
+</style>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Show Screens</title>
+</head>
+<body>
+	
+	<% Screens screen=(Screens)request.getAttribute("screens"); %>
+	
+	<div class="container" id="screen1">
+		<p><h4 align="center"><%=screen.getName()%></h4></p>
+	</div>
+	<div><br/></div>
+	<div class="container">
+	
+			
+			<% 
+				int platinumSeat=screen.getPlatinumSeat();
+				int goldSeat=screen.getGoldSeat();
+				int silverSeat=screen.getSilverSeat();
+			%>
+			
+			<%  for(int i=1;i<=platinumSeat;i++)
+				{
+			%>
+				<div id="seats">
+				 	<p>P<%=i%></p>
+				 	<input class="form-check-input" name="P1" type="radio" id="radio1" />
+				</div>
+			<%
+			 	}
+			%>
+		
+	</div>
+</body>
+</html>
+<%@ include file="common/footer.jspf" %>

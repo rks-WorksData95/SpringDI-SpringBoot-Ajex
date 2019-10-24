@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="SpringCrudPostman"/>
+<aop-project name="SpringBootDemo"/>
+<aop-project name="JpaWithHibernateAdvance"/>
+<aop-project name="SpringBootJdbcToJpa"/>
+<aop-project name="MovieTicketBooking"/>
+<aop-project name="SpringBootWebApp"/>
+</aop-reference-model>
